@@ -1,0 +1,246 @@
+#name-input {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#generate-button {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.tag p {
+  margin: 0 8px;
+}
+
+#clear-button {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+}
+
+/* Start Global Rouls */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+  --main-color: #f20c28;
+  --back-color: #f9f9f9;
+  --text-color: #f5faf6;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+/* Container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rouls */
+
+.top {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.top h1 {
+  margin-bottom: 20px;
+}
+
+/* Start Form */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form #name-input {
+  padding: 6px 12px;
+  margin-right: 10px;
+  font-size: 17px;
+  outline: none;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+form #name-input:focus {
+  border: 2px solid gray;
+}
+
+form #name-input::placeholder {
+  color: #999;
+}
+
+form #add-btn {
+  padding: 6px 12px;
+  font-size: 17px;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+form #add-btn:hover {
+  background-color: #f20c27d8;
+}
+
+@media (max-width: 767px) {
+  .top h1 {
+    font-size: 26px;
+  }
+  form {
+    flex-direction: column;
+  }
+  form #name-input {
+    width: 88%;
+    margin-bottom: 12px;
+  }
+  form #add-btn {
+    width: 88%;
+  }
+}
+
+#clear-button {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  margin: 20px;
+}
+/* End Form */
+
+/* Start Content */
+.content {
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .card {
+  background-color: var(--main-color);
+  width: calc(88% / 3);
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 40px;
+  height: 260px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.content .card i {
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  right: 12px;
+  top: 8px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.content .card i:hover {
+  background-color: var(--back-color);
+}
+
+.content .card h3 {
+  color: var(--text-color);
+  margin-top: 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.content .card p {
+  color: var(--text-color);
+  text-transform: lowercase;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content .card h2 {
+  height: 160px;
+  background-color: var(--back-color);
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .content .card {
+    width: calc(92% / 2);
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 767px) {
+  .content .card {
+    width: 88%;
+    margin: 20px auto;
+  }
+  .content .card h3 {
+    font-size: 28px;
+  }
+  .content .card h2 {
+    font-size: 30px;
+  }
+}
+/* End Content */
